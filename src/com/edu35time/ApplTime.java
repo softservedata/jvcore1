@@ -134,7 +134,7 @@ public class ApplTime {
         // System.out.println("CurrentZone: " + currentZone);
         ZonedDateTime zdt = date.atZone(ZoneId.of("Europe/Helsinki"));
         long millis = zdt.toInstant().toEpochMilli();
-        System.out.println("millis = \t\t\t" + millis);
+        System.out.println("\tmillis = \t\t\t" + millis);
         System.out.println("System.currentTimeMillis() =\t" + System.currentTimeMillis());
         //
         // Convert Date to LocalDateTime
