@@ -22,3 +22,28 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+##########
+
+# Config Files Mac
+.DS_Store
+
+# Idea Project files
+/**/target/
+/**/.settings/
+/**/bin/
+/**/build/
+#/**/lib/
+/**/.idea/
+/**/out/
+/**/.classpath
+/**/.project
+/**/.checkstyle
+/**/*.iml
+
+# Ignore log
+*.log
+*.log.[1234567890]
+
+
+
