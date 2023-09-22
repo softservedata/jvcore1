@@ -60,14 +60,14 @@ public class ApplTime {
 		LocalTime date4 = LocalTime.of(22, 15);
 		System.out.println("time date4: " + date4);
 		*/
-		/*-
+		// /*-
 		LocalDate past = LocalDate.now()
 				.plusWeeks(3)
 				.plus(-3, ChronoUnit.CENTURIES);
 		int day = past.getDayOfMonth();
 		DayOfWeek dayweek = past.getDayOfWeek();
 		System.out.println("past = " + past + "  day = " + day + "  dayweek = " + dayweek);
-		*/
+		// */
 		/*-
 		// Get the current date and time
 		//ZonedDateTime date1 = ZonedDateTime.parse("2007-12-03T10:15:30+05:30[Asia/Karachi]");
