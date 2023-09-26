@@ -66,7 +66,7 @@ public class ApplTime {
 				.plus(-3, ChronoUnit.CENTURIES);
 		int day = past.getDayOfMonth();
 		DayOfWeek dayweek = past.getDayOfWeek();
-		System.out.println("\tpast = " + past + "  day = " + day + "  dayweek = " + dayweek);
+		System.out.println("\npast = " + past + "  day = " + day + "  dayweek = " + dayweek);
 		// */
 		/*-
 		// Get the current date and time
