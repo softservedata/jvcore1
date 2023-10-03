@@ -11,7 +11,7 @@
 .mtj.tmp/
 
 # Package Files #
-#*.jar
+*.jar
 *.war
 *.nar
 *.ear
@@ -33,7 +33,7 @@ replay_pid*
 /**/.settings/
 /**/bin/
 /**/build/
-#/**/lib/
+/**/lib/
 /**/.idea/
 /**/out/
 /**/.classpath
