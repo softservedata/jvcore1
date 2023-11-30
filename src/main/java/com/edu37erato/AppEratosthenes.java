@@ -1,6 +1,7 @@
 package com.edu37erato;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,24 +11,34 @@ public class AppEratosthenes {
         if (limit < 2) {
             throw new RuntimeException("Invalid parameter, limit = " + limit);
         }
+        // Initialization
+        int[] sieve = new int[limit + 1];
+        sieve[0] = 0;
+        sieve[1] = 0;
+        for (int i = 2; i < sieve.length; i++) {
+            sieve[i] = i;
+        }
         //
-        List<Integer> numbers = new ArrayList<>();
-        boolean isPrime = true;
-        for (int current = 2; current <= limit; current++) {
-            isPrime = true;
-            for (Integer prime : numbers) {
-                if (current % prime == 0) {
-                    isPrime = false;
-                    break;
+        int j = 0;
+        for (int i = 2; i < sieve.length; i++) {
+            if (sieve[i] != 0) {
+                j = 1;
+                while (i + j * i < sieve.length) {
+                    sieve[i + j * i] = 0;
+                    j = j + 1;
                 }
             }
-            if (isPrime) {
-                numbers.add(current);
+        }
+        //
+        int result = 0;
+        for (int i = 0; i < sieve.length; i++) {
+            if (sieve[i] != 0) {
+                result = result + 1;
             }
         }
-        System.out.println("numbers = " + numbers);
+        System.out.println("numbers = " + Arrays.toString(sieve));
         //
-        return numbers.size();
+        return result;
     }
 
     public static void main(String[] args) {
